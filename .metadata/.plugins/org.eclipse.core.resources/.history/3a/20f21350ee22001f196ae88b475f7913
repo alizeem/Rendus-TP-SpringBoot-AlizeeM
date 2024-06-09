@@ -1,0 +1,24 @@
+package com.example.unc.miage;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+public class Invite implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private long id;
+	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd-MM-yyyy")
+	private Date date;
+	private String nom;
+	private String prenom;
+	private String email;
+	
+	public Invite() {
+	}
+	
+	public long getId() {
+		return this.id;
+	}
+}

@@ -1,0 +1,7 @@
+spring.application.name=technoLog_SpringBootRest_3_alizee
+
+spring.jpa.hibernate.ddl-auto=none
+spring.datasource.url=jdbc:mysql://localhost:3306/lesinvites2
+spring.datasource.username=root
+spring.datasource.password=Alizee.2024
+

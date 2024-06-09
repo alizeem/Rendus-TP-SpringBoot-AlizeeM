@@ -1,0 +1,23 @@
+package com.example.unc.miage;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class InviteController {
+	
+	@RequestMapping("/")
+	public String index() {
+		return "index";
+    }
+	
+	@RequestMapping(value="/save", method=RequestMethod.POST)
+	public ModelAndView save(@ModelAttribute Invite invite) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("invite-data");
+		return new ModelAndView("redirect:/");
+	}
+    
+	}
+
+

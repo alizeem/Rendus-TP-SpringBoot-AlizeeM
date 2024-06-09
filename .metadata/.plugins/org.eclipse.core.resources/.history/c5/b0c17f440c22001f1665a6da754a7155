@@ -1,0 +1,10 @@
+package repository;
+
+import java.util.ArrayList;
+import org.springframework.data.repository.CrudRepository;
+
+import model.Invite;
+public interface InviteRepository extends CrudRepository<Invite, Long> {
+ArrayList<Invite> findByNomAndPrenom(String nom, String prenom);
+ArrayList<Invite> findByNom(String nom);
+}

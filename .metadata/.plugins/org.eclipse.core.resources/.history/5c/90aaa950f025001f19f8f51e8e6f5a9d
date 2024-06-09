@@ -1,0 +1,78 @@
+package com.example.unc.miage;
+
+import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Contrôleur REST pour gérer les requêtes de bienvenue des invités.
+ * 
+ * Ce contrôleur fournit des points d'entrée pour afficher des messages de bienvenue
+ * et gérer des informations d'invités.
+ */
+@RestController
+public class BienvenueInviteController {
+    
+    /**
+     * Nom de la conférence, injecté depuis les propriétés de l'application.
+     * Si aucune valeur n'est fournie, la valeur par défaut est "à tout le monde".
+     */
+    @Value("${conference.name: à tout le monde}")
+    private String conference;
+    
+    /**
+     * Compteur atomique pour générer des identifiants uniques pour les invités.
+     */
+    private final AtomicLong counter = new AtomicLong();
+    
+    /**
+     * Gère les requêtes à la racine de l'application.
+     * 
+     * @return Une chaîne HTML avec un message de bienvenue contenant le nom de la conférence.
+     */
+    @RequestMapping("/") // URL: http://localhost:8080
+    public String home() {
+        return "<h1>Bienvenue " + conference + "</h1>";
+    }
+    
+    /**
+     * Gère les requêtes pour ajouter un nouvel invité.
+     * 
+     * @param nom Le nom de l'invité, "Palmer" par défaut.
+     * @param prenom Le prénom de l'invité, "Jack" par défaut.
+     * @param email L'email de l'invité, "help.dev@spring.io" par défaut.
+     * @return Un objet Invite contenant les informations de l'invité.
+     */
+    @RequestMapping("/bienvenue")
+    public Invite bienvenue(@RequestParam(value = "nom", defaultValue = "Palmer") String nom,
+                            @RequestParam(value = "prenom", defaultValue = "Jack") String prenom,
+                            @RequestParam(value = "email", defaultValue = "help.dev@spring.io") String email) {
+        return new Invite(counter.incrementAndGet(), nom, prenom, email);
+    }
+    
+    /**
+     * Gère les requêtes pour afficher un message de bienvenue personnalisé pour un invité.
+     * 
+     * @param invite Le nom de l'invité.
+     * @return Une chaîne HTML avec un message de bienvenue personnalisé.
+     */
+    @RequestMapping("/{invite}")
+    public String bienvenueInvite(@PathVariable String invite) {
+        return "<H1> Bienvenue " + invite + "</H1>";
+    }
+    
+    /**
+     * Gère les requêtes pour tester un nombre.
+     * 
+     * @param nombre Un nombre entier reçu dans l'URL.
+     * @return Une chaîne HTML indiquant le nombre reçu incrémenté de 1.
+     */
+    @RequestMapping("/test/{nombre}")
+    public String testNombre(@PathVariable int nombre) {
+        nombre++;
+        return "<H1> Nombre reçu + 1: " + nombre + "</H1>";
+    }
+}

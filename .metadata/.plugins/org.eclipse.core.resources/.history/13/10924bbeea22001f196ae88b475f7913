@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Test du formulaire</title>
+</head>
+<body>
+	<form action="../ajoute" method="post">
+	<table>
+		<tr>
+			<td>Nom</td>
+			<td><input type="text" name="nom"></input></td>
+		</tr>
+		<tr>
+			<td>Pr&#233;nom :</td>
+			<td><input type="text" name="nom"></input></td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>

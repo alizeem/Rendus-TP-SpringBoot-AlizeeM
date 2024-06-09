@@ -1,0 +1,26 @@
+package controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import model.Invite;
+import repository.InviteRepository;
+
+@RestController
+public class InvitesController {
+	
+	@Autowired // Injection du repository
+	private InviteRepository inviteRepository;
+	
+	@RequestMapping("/defaut")
+	public Invite getDefaut() {
+		return new Invite("spring", "sav", "sav.spring@gmail.com");
+	}
+	
+	@RequestMapping("/all")
+	ArrayList<Invite> getAll() {
+		return (ArrayList<Invite>)inviteRepository.findAll();
+	}
+
+}

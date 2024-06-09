@@ -1,0 +1,29 @@
+package com.example.unc.miage;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class InvitesController {
+	
+	@Autowired
+	private InviteRepository inviteRepository;
+	
+	
+	@GetMapping("/{invite}") // Map requêtes GET 
+	public ResponseEntity<Invite> rechercheInviteParGetInvite (
+	@PathVariable("invite") String nom) {
+	ArrayList<Invite> liste = inviteRepository.findByNom(nom);
+	if (liste.size()==0)
+	return ResponseEntity.notFound().build();
+	else
+	return ResponseEntity.ok(liste.get(0));
+	}
+
+
+}

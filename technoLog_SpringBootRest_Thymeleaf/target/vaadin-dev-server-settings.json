@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "C:/Users/mnkha/Documents/2024/Master MIAGE/S2/Technologie Logicielle/TP/Spring Boot/technoLog_SpringBootRest_Thymeleaf/./frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "C:/Users/mnkha/Documents/2024/Master MIAGE/S2/Technologie Logicielle/TP/Spring Boot/technoLog_SpringBootRest_Thymeleaf/./frontend/generated/jar-resources",
+  "staticOutput": "C:/Users/mnkha/Documents/2024/Master MIAGE/S2/Technologie Logicielle/TP/Spring Boot/technoLog_SpringBootRest_Thymeleaf/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "C:\\Users\\mnkha\\Documents\\2024\\Master MIAGE\\S2\\Technologie Logicielle\\TP\\Spring Boot\\technoLog_SpringBootRest_Thymeleaf\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "C:\\Users\\mnkha\\Documents\\2024\\Master MIAGE\\S2\\Technologie Logicielle\\TP\\Spring Boot\\technoLog_SpringBootRest_Thymeleaf\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "C:/Users/mnkha/Documents/2024/Master MIAGE/S2/Technologie Logicielle/TP/Spring Boot/technoLog_SpringBootRest_Thymeleaf/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "C:/Users/mnkha/Documents/2024/Master MIAGE/S2/Technologie Logicielle/TP/Spring Boot/technoLog_SpringBootRest_Thymeleaf/target/dev-bundle/config",
+  "jarResourcesFolder": "C:/Users/mnkha/Documents/2024/Master MIAGE/S2/Technologie Logicielle/TP/Spring Boot/technoLog_SpringBootRest_Thymeleaf/./frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "C:\\Users\\mnkha\\Documents\\2024\\Master MIAGE\\S2\\Technologie Logicielle\\TP\\Spring Boot\\technoLog_SpringBootRest_Thymeleaf\\target\\sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}

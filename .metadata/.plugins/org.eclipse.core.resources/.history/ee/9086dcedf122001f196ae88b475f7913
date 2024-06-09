@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page d'index</title>
+</head>
+<body>
+	<form action="save" method="post">
+		<table>
+			<tr>
+				<td><label>Nom :</label></td>
+				<td><input type="text" name="nom"></input></td>
+			</tr>
+			<tr>
+				<td><label>Pr&#233;nom :</label></td>
+				<td><input type="text" name="prenom"></input></td>
+			</tr>
+			<tr>
+				<td><label>Email :</label></td>
+				<td><input type="text" name="email"></input></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="hidden" name="date" id="date_creation"></input></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Validez"></input></td>
+			</tr>
+		</table>
+	</form>
+	
+	<script>
+		document.getElementById("date_creation").value = new Date();
+	</script>
+
+</body>
+</html>

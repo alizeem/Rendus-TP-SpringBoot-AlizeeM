@@ -1,0 +1,17 @@
+package com.example.unc.miage;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+public interface InviteRepository extends CrudRepository<Invite, Long> {
+	ArrayList<Invite> findByNomAndPrenom(String nom, String prenom);
+	ArrayList<Invite> findByNom(String nom);
+	Invite findByNomAndPrenomAndEmail(String nom, String prenom, String email);
+	
+	@Query("select i.nom from Invite i group by i.nom having count(*)>1")
+	Collection<Invite> rechercherDoublons() ;
+	
+}

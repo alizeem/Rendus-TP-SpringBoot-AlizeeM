@@ -1,0 +1,14 @@
+package controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import repository.InviteRepository;
+
+@RestController
+public class InvitesController {
+	
+	@Autowired // Injection du repository
+	private InviteRepository inviteRepository;
+
+}

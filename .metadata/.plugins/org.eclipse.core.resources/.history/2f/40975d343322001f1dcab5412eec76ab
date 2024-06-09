@@ -1,0 +1,11 @@
+package com.example.unc.miage;
+
+import org.springframework.boot.SpringApplication;
+
+public class TechnoLogSpringBootRest3AlizeeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TechnoLogSpringBootRest3AlizeeApplication.class, args);
+	}
+
+}

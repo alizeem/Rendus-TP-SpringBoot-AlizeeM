@@ -1,0 +1,20 @@
+<html xmlns:th="http://thymeleaf.org">
+	<table>
+		<tr>
+			<td><h4>Nom :</h4></td>
+			<td><h4 th:text="${invite.nom}"></h4></td>
+		</tr>
+		<tr>
+			<td><h4>Pr&#233;nom :</h4></td>
+			<td><h4 th:text="${invite.prenom}"></h4></td>
+		</tr>
+		<tr>
+			<td><h4>Email :</h4></td>
+			<td><h4 th:text="${invite.email}"></h4></td>
+		</tr>
+		 <tr>
+                <td><h4>Date de création :</h4></td>
+                <td><h4 th:text="${#dates.format(invite.date, 'dd-MM-yyyy')}"></h4></td>
+            </tr>
+	</table>
+</html>
